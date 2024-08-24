@@ -41,11 +41,11 @@
 <meta property="og:title" content="hexo 使用方法">
 <meta property="og:url" content="https://flowlikee.github.io/2024/08/18/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#参考：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;commands#初始化仓库hexo init [folder]#新建文章hexo new [layout]新建一篇文章。 如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。 Use the layout draft to create a draft. 如果标题包含空格的">
+<meta property="og:description" content="参考：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;commands 初始化仓库hexo init [folder] 新建文章hexo new [layout]新建一篇文章。 如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。 Use the layout draft to create a draft. 如果标题包含空格的话">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-08-18T15:34:24.000Z">
-<meta property="article:modified_time" content="2024-08-18T15:42:06.723Z">
+<meta property="article:modified_time" content="2024-08-24T04:30:02.108Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1723995737060),
+    lastupdate: new Date(1724476409251),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2511,13 +2511,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>#参考：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a><br>#初始化仓库<br>hexo init [folder]<br>#新建文章<br>hexo new [layout]<br>新建一篇文章。 如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。 Use the layout draft to create a draft. 如果标题包含空格的话，请使用引号括起来。<br>选项 	描述<br>-p, –path 	文章的路径。 自定义文章的路径。<br>-r, –replace 	如果存在的话，替换当前的文章。<br>-s, –slug 	文章别名。 自定义文章的 URL。</p>
+    <p>参考：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
+<h1 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h1><p>hexo init [folder]</p>
+<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><p>hexo new [layout]<br>新建一篇文章。 如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。 Use the layout draft to create a draft. 如果标题包含空格的话，请使用引号括起来。<br>选项 	描述<br>-p, –path 	文章的路径。 自定义文章的路径。<br>-r, –replace 	如果存在的话，替换当前的文章。<br>-s, –slug 	文章别名。 自定义文章的 URL。</p>
 <p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。 对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 index.md 文件。 你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p>
 <p>hexo new page –path about&#x2F;me “About me”</p>
 <p>以上命令会创建一个 source&#x2F;about&#x2F;me.md 文件，同时 Front Matter 中的 title 为 “About me”</p>
 <p>注意！ title 是必须指定的！ For example, this will not result in the behaviour you might expect:</p>
 <p>hexo new page –path about&#x2F;me</p>
 <p>此时 Hexo 会创建 source&#x2F;_posts&#x2F;about&#x2F;me.md，同时 me.md 的 Front Matter 中的 title 为 “page”。 这是因为在上述命令中，hexo-cli 将 page 视为指定文章的标题、并采用默认的 layout。</p>
+<h2 id="hexo-添加图片"><a href="#hexo-添加图片" class="headerlink" title="hexo 添加图片"></a>hexo 添加图片</h2><p>参考资料<a target="_blank" rel="noopener" href="https://blog.csdn.net/2301_77285173/article/details/130189857">hexo添加图片参考资料</a></p>
 
   </div>
   
@@ -2542,10 +2545,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-18T23:42:06+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-24T12:30:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 18, 2024</p>
+    <p>更新于：Aug 24, 2024</p>
   </a>
 </div>
 
@@ -2621,6 +2624,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2024/08/24/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>markdown学习笔记</p>
+          <p class='content'>markdown学习笔记markdown是什么？Markdown是一种轻量级的标记语言，可用于将格式设置元素添加到纯文本文档中。Markdown 由John Gruber于2004年创建，如今已...</p>
+        </a>
+      
       
         <a class='next' href='/2024/08/01/Hello/'>
           <p class='title'>Hello<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -2685,7 +2693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="toc-text">hexo 添加图片</span></a></li></ol>
   </div>
 </section>
 
@@ -3179,7 +3187,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Hexo","url":"https://flowlikee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://flowlikee.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://flowlikee.github.io/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://flowlikee.github.io/2024/08/18/hexo-使用方法/","name":"hexo 使用方法"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Hexo","url":"https://flowlikee.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://flowlikee.github.io/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"https://flowlikee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://flowlikee.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"hexo 使用方法","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://flowlikee.github.io/2024/08/18/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://flowlikee.github.io/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://flowlikee.github.io/2024/08/18/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/","wordCount":0,"datePublished":"2024-08-18T15:34:24.000Z","dateModified":"2024-08-18T15:42:06.723Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Hexo","url":"https://flowlikee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://flowlikee.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://flowlikee.github.io/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://flowlikee.github.io/2024/08/18/hexo-使用方法/","name":"hexo 使用方法"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Hexo","url":"https://flowlikee.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://flowlikee.github.io/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"https://flowlikee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://flowlikee.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"hexo 使用方法","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://flowlikee.github.io/2024/08/18/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://flowlikee.github.io/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://flowlikee.github.io/2024/08/18/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/","wordCount":0,"datePublished":"2024-08-18T15:34:24.000Z","dateModified":"2024-08-24T04:30:02.108Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
